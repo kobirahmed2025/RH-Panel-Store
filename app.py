@@ -12,7 +12,7 @@ CORS(app)
 
 # আপনার জেনারেট করা অ্যাপ পাসওয়ার্ড
 SENDER_EMAIL = "n76167138@gmail.com"
-SENDER_PASSWORD = "hcvf zezn jkgx srtp"
+SENDER_PASSWORD = "spks mvxk flcc yfxd"
 
 registration_store = {}
 
