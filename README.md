@@ -1,8 +1,8 @@
-# 🚀 Hi, I'm [Your Name]
+# 🚀 Hi, I'm Kobir Dev
 
 💻 Beginner Programming | 🤖 AI Enthusiast | 🐍 Python Lover || I am From BANGLADESH
 
-## [Your Name]
+## Kobir Dev
 **Telegram Bot Developer**
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## 📊 GitHub Analytics
 
-![Your Name's github stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical)
+![Kobir Dev's github stats](https://github-readme-stats.vercel.app/api?username=kobirahmed2025&show_icons=true&theme=radical)
 
 ## 🛠️ Tech Stack
 
@@ -27,15 +27,4 @@
 ### 🗄️ Databases & Hosting
 <p>
   <img src="https://img.shields.io/badge/POSTGRESQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/RAILWAY-0B0F19?style=for-the-badge&logo=railway&logoColor=white" alt="Railway">
-  <img src="https://img.shields.io/badge/VERCEL-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
-  <img src="https://img.shields.io/badge/RENDER-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render">
-</p>
-
-## 📈 GitHub Metrics
-![Your Name's github metric](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=radical)
-
-## 🎯 Current Focus
-- 🎓 I am studying Computer Science and Technology.
-- 💻 I'm currently working on Advanced Telegram Bots And APIs.
-- 🌱 I'm learning Machine Learning & AI.
+  <img src
