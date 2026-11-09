@@ -54,7 +54,7 @@ def register_request_otp():
   message["From"] = SENDER_EMAIL
   message["To"] = email
 
-  # একদম আধুনিক, কালারিং এবং প্রিমিয়াম এইচটিএমএল ডিজাইন
+  # একদম আধুনিক, বক্স ছাড়া প্রিমিয়াম কালারিং ডিজাইন এবং কপি বাটনসহ
   html = f"""
     <!DOCTYPE html>
     <html>
@@ -77,22 +77,21 @@ def register_request_otp():
                 max-width: 480px;
                 margin: 0 auto;
                 background: linear-gradient(135deg, #1e1b4b 0%, #311045 100%);
-                border-radius: 16px;
+                border-radius: 20px;
                 overflow: hidden;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
                 border: 1px solid rgba(255, 255, 255, 0.1);
             }}
             .email-header {{
-                padding: 30px 30px 10px 30px;
+                padding: 35px 30px 10px 30px;
                 text-align: center;
             }}
             .email-header h1 {{
-                color: #ffffff;
-                font-size: 24px;
+                font-size: 26px;
                 margin: 0;
-                font-weight: 700;
-                letter-spacing: 1px;
-                background: linear-gradient(90deg, #818cf8, #c084fc);
+                font-weight: 800;
+                letter-spacing: 1.5px;
+                background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }}
@@ -109,25 +108,29 @@ def register_request_otp():
                 color: #9ca3af;
                 font-size: 14px;
                 line-height: 1.6;
-                margin-bottom: 30px;
-            }}
-            .otp-box {{
-                background: rgba(255, 255, 255, 0.05);
-                border: 2px dashed #6366f1;
-                border-radius: 12px;
-                padding: 20px;
-                margin: 20px 0;
-                display: inline-block;
+                margin-bottom: 25px;
             }}
             .otp-code {{
-                font-size: 36px;
+                font-size: 38px;
                 font-weight: bold;
                 letter-spacing: 8px;
                 color: #38bdf8;
-                margin: 0;
+                margin: 15px 0 25px 0;
+            }}
+            .copy-btn {{
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+                color: #ffffff;
+                text-decoration: none;
+                padding: 12px 32px;
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 50px;
+                display: inline-block;
+                box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+                letter-spacing: 0.5px;
             }}
             .footer-text {{
-                margin-top: 30px;
+                margin-top: 35px;
                 color: #6b7280;
                 font-size: 12px;
             }}
@@ -148,9 +151,10 @@ def register_request_otp():
                                 <h2>Email Verification</h2>
                                 <p>You're just one step away from finishing your account registration. Use the security code below:</p>
                                 
-                                <div class="otp-box">
-                                    <p class="otp-code">{otp}</p>
-                                </div>
+                                <div class="otp-code">{otp}</div>
+
+                                <!-- আধুনিক প্রিমিয়াম কপি বাটন -->
+                                <a href="https://api.whatsapp.com/send?text={otp}" class="copy-btn" target="_blank">Copy Code</a>
 
                                 <p class="footer-text">This code will expire in 10 minutes. If you didn't request this, please ignore this email.</p>
                             </td>
@@ -189,10 +193,10 @@ def register_verify_otp():
     return jsonify({"success": False, "message": "OTP expired."}), 400
 
   if record["otp"] == str(user_otp):
-    del registration_store[email]
+    del registration_store.get(email)
     return jsonify({"success": True, "message": "Account created successfully!"})
   else:
-    return jsonify({"success": False, "message": "Invalid. OTP."}), 400
+    return jsonify({"success": False, "message": "Invalid OTP."}), 400
 
 
 if __name__ == "__main__":
