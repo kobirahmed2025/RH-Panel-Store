@@ -11,8 +11,8 @@ app = Flask(__name__)
 CORS(app)
 
 # আপনার জেনারেট করা অ্যাপ পাসওয়ার্ড
-SENDER_EMAIL = "n76167138@gmail.com"
-SENDER_PASSWORD = "spks mvxk flcc yfxd"
+SENDER_EMAIL = "income2007.20@gmail.com"
+SENDER_PASSWORD = "epst bcud qbfv mmpd"
 
 registration_store = {}
 
